@@ -11,5 +11,21 @@ const sites = [
         "address": "https://microsoft.com",
         "logo": "https://cdn.vox-cdn.com/thumbor/drG69iSTSbsYDNcckVzB3x97pDA=/7x0:633x417/920x613/filters:focal(7x0:633x417):format(webp)/cdn.vox-cdn.com/assets/1311169/mslogo.jpg"
     },
-
 ];
+
+function createLink(link, imgSource, location) {
+    // create an anchor 'a' tag.
+    const tag = document.createElement('a')
+    // create a 'href' tag to reference links.
+    tag.setAttribute('href', link)
+    // create an 'img' tag.
+    const image = document.createElement('img')
+    // create a 'src' tag to display the image.
+    image.setAttribute('src', imgSource)
+    // append img w/ source.
+    tag.appendChild(image)
+    // append container.
+    location.appendChild(tag)
+}
+const container = document.getElementById('container')
+
